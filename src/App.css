@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.text-orange {
+  color: #ff7f00 !important;
+}
+
+.bg-orange {
+  background-color: #ff7f00 !important;
+}
+
+
+
+.hero-section {
+  height: 100vh;
+  background: url('assets/bab.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 60px;
+  animation: fadeIn   4s ease-in;
+    text-shadow: 20px 20px 20px rgb(0, 0, 0);
+
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+ .text{
+  
+  animation: fadeIn   4s ease-out;
+
+
+}
+
+.hero-section p {
+  font-style: italic;
+  font-size: 2rem;
+  
+}
+
+.books-section .card:hover {
+  transform: scale(1.05);
+  transition: transform 3s;
+}
+
+.edit-section {
+  background: #ff8e1d;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+footer {
+  background-color: #1a1818;
+  color: #eee;
+  padding: 30px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.livre{
+  width: 200px;
+  height: 200px;
+}
+
+
+
+
+
+.book-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.book-img {
+  height: 200px;
+  object-fit:none;
+}
+
+.see-more-btn {
+  border-color: #ff7a00;
+  color: #ff7a00;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #ff7a00;
+  color: white;
+}
+/* partenaire */
+
+.partenaire-container {
+  padding: 7rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.partenaire-container h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #ff7f00 !important;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.slider {
+  overflow:hidden;
+  position: relative;
+  height: 100px;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(200px * 10);
+  animation: scroll 20s linear infinite;
+}
+
+.slide {
+  width: 250px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  margin: 0 70px; /* <-- espace horizontal entre les images */
+
+}
+
+.slide img {
+  width: auto;
+  height: 100px;
+  object-fit: contain;
+  transition: filter 0.3s;
+}
+
+
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
