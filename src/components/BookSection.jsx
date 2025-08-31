@@ -1,10 +1,10 @@
 import React from "react";
 import autre from '../assets/autre.jpg';
 import soldat from '../assets/SOLDAT.jpg';
-import noeud from '../assets/noeud.jpg';
-import gourou from '../assets/gourou.jpg';
-import camp from '../assets/camp.jpg'
-import souffle from '../assets/souffle.jpg'
+import noeud from '../assets/NOEUD.jpg';
+import gourou from '../assets/GOUROU.jpg';
+import camp from '../assets/CAMP.jpg'
+import souffle from '../assets/SOUFFLE.jpg'
 import cherif from '../assets/cherif.jpg'
 import coeur from '../assets/coeur.jpg'
 
