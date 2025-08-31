@@ -1,6 +1,6 @@
 import React from "react";
 import autre from '../assets/autre.jpg';
-import soldat from '../assets/soldat.jpg';
+import soldat from '../assets/SOLDAT.jpg';
 import noeud from '../assets/noeud.jpg';
 import gourou from '../assets/gourou.jpg';
 import camp from '../assets/camp.jpg'
