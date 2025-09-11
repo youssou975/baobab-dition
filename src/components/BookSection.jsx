@@ -29,7 +29,7 @@ const Bookshelf = () => {
   }
 
   return (
-    <div className="bookshelf-container">
+    <div className="bookshelf-container" id="livres">
       <h2 className="bookshelf-title">Livres édités</h2>
       {chunkedBooks.map((group, index) => (
         <div key={index}>

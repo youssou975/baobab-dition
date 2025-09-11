@@ -10,7 +10,7 @@ function NavbarBaobab() {
         <Navbar.Collapse className="justify-content-end ">
           <Nav className='hover-underline'>
             <Nav.Link href="#home">Accueil</Nav.Link>
-            <Nav.Link href="#home">Présentation</Nav.Link>
+            <Nav.Link href="#presentation">Présentation</Nav.Link>
 
           <Nav.Link href="#livres">Livres</Nav.Link>
             <Nav.Link href="#editer">Éditez</Nav.Link>
