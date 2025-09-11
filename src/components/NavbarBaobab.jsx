@@ -13,7 +13,7 @@ function NavbarBaobab() {
             <Nav.Link href="#presentation">Présentation</Nav.Link>
 
           <Nav.Link href="#livres">Livres</Nav.Link>
-            <Nav.Link href="#editer">Éditez</Nav.Link>
+            <Nav.Link href="#editer">Faites vous éditer</Nav.Link>
             <Nav.Link href="#contact">Contacts</Nav.Link>
           </Nav>
         </Navbar.Collapse>
