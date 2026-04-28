@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import baobabLogo from "../assets/baobabed.png";
 // Replace with your actual import: import baobab from '../assets/image.png'
-const cataloguePDF = "../catalogue.pdf"; // adjust path as needed
+const cataloguePDF = "/catalogue.pdf"; // adjust path as needed
 
 const stats = [
   { value: "2013", label: "Fondée à Dakar" },
