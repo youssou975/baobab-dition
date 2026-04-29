@@ -1,0 +1,350 @@
+/* ──────────────────────────────────────────────────────────────────────── */
+/* DAKAR EVENT SECTION - GLOBAL STYLES */
+/* ──────────────────────────────────────────────────────────────────────── */
+
+.event-premium {
+  background: linear-gradient(135deg, #fafaf8 0%, #f5f1ed 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ──────────────────────────────────────────────────────────────────────── */
+/* HEADER SECTION */
+/* ──────────────────────────────────────────────────────────────────────── */
+
+.dakar-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.dakar-eyebrow {
+  color: #FF6B35;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+.dakar-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.dakar-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* ──────────────────────────────────────────────────────────────────────── */
+/* IMAGE STYLING */
+/* ──────────────────────────────────────────────────────────────────────── */
+
+.dakar-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.dakar-image:hover {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ──────────────────────────────────────────────────────────────────────── */
+/* CONTENT COLUMN */
+/* ──────────────────────────────────────────────────────────────────────── */
+
+.dakar-col-content {
+  padding-left: 40px;
+}
+
+@media (max-width: 992px) {
+  .dakar-col-content {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+}
+
+.dakar-details-wrapper {
+  margin-bottom: 35px;
+}
+
+/* ──────────────────────────────────────────────────────────────────────── */
+/* INFO CARDS GRID */
+/* ──────────────────────────────────────────────────────────────────────── */
+
+.dakar-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+@media (max-width: 768px) {
+  .dakar-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dakar-info-card {
+  padding: 25px;
+  background-color: #f9f4f0;
+  border-radius: 12px;
+  border-top: 4px solid #FF6B35;
+  transition: all 0.3s ease;
+}
+
+.dakar-info-card:hover {
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.1);
+  transform: translateY(-2px);
+}
+
+.dakar-card-label {
+  font-size: 13px;
+  color: #FF6B35;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+}
+
+.dakar-card-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ──────────────────────────────────────────────────────────────────────── */
+/* ABOUT BOX */
+/* ──────────────────────────────────────────────────────────────────────── */
+
+.dakar-about-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.dakar-about-box:hover {
+  border-color: #FF6B35;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.08);
+}
+
+.dakar-about-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+  margin: 0 0 15px 0;
+}
+
+.dakar-about-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+}
+
+/* ──────────────────────────────────────────────────────────────────────── */
+/* ACTIVITIES GRID */
+/* ──────────────────────────────────────────────────────────────────────── */
+
+.dakar-activities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .dakar-activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dakar-activity-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+.dakar-activity-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dakar-activity-list li {
+  transition: color 0.3s ease;
+}
+
+.dakar-activity-list li:hover {
+  color: #FF6B35;
+}
+
+/* ──────────────────────────────────────────────────────────────────────── */
+/* CTA BOX */
+/* ──────────────────────────────────────────────────────────────────────── */
+
+.dakar-cta-box {
+  background-color: #f99100;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(249, 145, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.dakar-cta-box:hover {
+  box-shadow: 0 15px 50px rgba(249, 145, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+.dakar-cta-label {
+  font-size: 14px;
+  margin-bottom: 15px;
+  opacity: 0.95;
+  margin: 0 0 15px 0;
+}
+
+.dakar-cta-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin: 0 0 15px 0;
+}
+
+.dakar-divider {
+  width: 40px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 15px auto;
+}
+
+.dakar-cta-contact {
+  font-size: 15px;
+  margin-bottom: 8px;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+.dakar-cta-contact:last-child {
+  margin-bottom: 0;
+}
+
+/* ──────────────────────────────────────────────────────────────────────── */
+/* RESPONSIVE DESIGN */
+/* ──────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .dakar-title {
+    font-size: 36px;
+  }
+
+  .dakar-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-premium {
+    padding: 40px 0 !important;
+  }
+
+  .dakar-header {
+    margin-bottom: 35px;
+  }
+
+  .dakar-title {
+    font-size: 28px;
+    margin-top: 10px;
+  }
+
+  .dakar-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .dakar-col-content {
+    padding-left: 0;
+  }
+
+  .dakar-info-card,
+  .dakar-about-box,
+  .dakar-cta-box {
+    padding: 20px;
+  }
+
+  .dakar-card-value,
+  .dakar-about-title,
+  .dakar-activity-title {
+    font-size: 14px;
+  }
+
+  .dakar-about-text,
+  .dakar-activity-list {
+    font-size: 13px;
+  }
+
+  .dakar-cta-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-premium {
+    padding: 30px 0 !important;
+  }
+
+  .dakar-header {
+    margin-bottom: 25px;
+  }
+
+  .dakar-eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .dakar-title {
+    font-size: 24px;
+    margin-top: 8px;
+  }
+
+  .dakar-subtitle {
+    font-size: 12px;
+  }
+
+  .dakar-cards-grid,
+  .dakar-activities-grid {
+    gap: 15px;
+  }
+
+  .dakar-info-card,
+  .dakar-about-box,
+  .dakar-cta-box {
+    padding: 16px;
+  }
+
+  .dakar-about-text {
+    line-height: 1.6;
+  }
+}
