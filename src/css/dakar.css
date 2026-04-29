@@ -205,8 +205,6 @@
 /* ──────────────────────────────────────────────────────────────────────── */
 
 .dakar-cta-box {
-  background-color: #f99100;
-  color: #fff;
   padding: 30px;
   border-radius: 12px;
   text-align: center;
@@ -231,6 +229,7 @@
   font-weight: 600;
   margin-bottom: 15px;
   margin: 0 0 15px 0;
+  
 }
 
 .dakar-divider {
@@ -348,3 +347,112 @@
     line-height: 1.6;
   }
 }
+
+/* ─── Audio Player ─── */
+
+.dakar-audio-player {
+  background: #1a1a1a;
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.dakar-waveform {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 40px;
+  margin-bottom: 14px;
+}
+
+.dakar-waveform-bar {
+  flex: 1;
+  border-radius: 2px;
+  background: #333;
+  transition: background 0.2s;
+}
+
+.dakar-waveform-bar.played  { background: rgba(255, 107, 53, 0.45); }
+.dakar-waveform-bar.current { background: #FF6B35; }
+
+@keyframes barBounce {
+  0%, 100% { transform: scaleY(1); }
+  50%       { transform: scaleY(1.7); }
+}
+
+.dakar-waveform-bar.current.playing {
+  animation: barBounce 0.5s ease-in-out infinite;
+}
+
+.dakar-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.dakar-time {
+  font-size: 12px;
+  color: #888;
+  min-width: 36px;
+  font-variant-numeric: tabular-nums;
+}
+
+.dakar-time.right { text-align: right; }
+
+.dakar-progress {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  border-radius: 2px;
+  background: #333;
+  outline: none;
+  cursor: pointer;
+}
+
+.dakar-progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #FF6B35;
+  cursor: pointer;
+}
+
+.dakar-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dakar-btn-skip {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.dakar-btn-skip:hover { color: #fff; }
+
+.dakar-btn-play {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #FF6B35;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s, background 0.2s;
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.35);
+}
+
+.dakar-btn-play:hover  { transform: scale(1.07); background: #ff8a5b; }
+.dakar-btn-play:active { transform: scale(0.96); }

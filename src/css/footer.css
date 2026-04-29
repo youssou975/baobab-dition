@@ -1,0 +1,36 @@
+/* ─── FooterBaobab.css ─── */
+
+footer#contact {
+  background: #1a1a1a;
+  color: #ccc;
+  padding: 48px 24px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+footer#contact p {
+  margin: 0 0 8px 0;
+  color: #aaa;
+}
+
+footer#contact p:last-child {
+  margin-bottom: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+footer#contact a {
+  color: #FF6B35;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer#contact a:hover {
+  color: #ff8a5b;
+}
+
+footer#contact .sep {
+  margin: 0 12px;
+  color: #444;
+}

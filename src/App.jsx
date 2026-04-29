@@ -16,8 +16,8 @@ function App() {
       <AboutBaobab/>
       <DakarLivre/>
       <BooksSection />
-      <Partenaire/>
       <EditSection />
+      <Partenaire/>
       <FooterBaobab />
     </>
   );

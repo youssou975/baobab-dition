@@ -1,7 +1,7 @@
 import React from 'react';
 import dakar from '../assets/case.gif';
 //import ddl from '../assets/ddl.png';
-
+import "../css/partenaire.css"
 import aes  from '../assets/aes.png';
 import ase from '../assets/ase.png';
 import apnet from '../assets/apnet.png';
