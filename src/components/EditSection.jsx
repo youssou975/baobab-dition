@@ -1,14 +1,14 @@
 import { Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import babImg from '../assets/bab.jpg';
+
 
 function EditSection() {
   const [hoveredFeature, setHoveredFeature] = useState(null);
 
   const styles = {
-    /* ═══════════════════════════════════════════════════════════════════════════════ */
-    /* EDIT SECTION - STYLES COMPLETS */
-    /* ═══════════════════════════════════════════════════════════════════════════════ */
+    
     
     section: {
       position: 'relative',
@@ -253,7 +253,8 @@ function EditSection() {
     },
 
     book1: {
-      background: 'linear-gradient(135deg, #FF6B35 0%, #FF8A5B 100%)',
+  background: `url(${babImg})`
+,
       zIndex: 3,
       top: '0',
       left: '0',

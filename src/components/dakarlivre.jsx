@@ -1,5 +1,5 @@
-import { Container, Row, Col } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+import { Container, Row, Col,Button } from 'react-bootstrap';
+import { motion ,} from 'framer-motion';
 import { useState, useRef, useEffect } from 'react';
 
 import dakar from '../assets/dakarlivres.jpg'
@@ -132,6 +132,7 @@ function DakarLivre() {
                     <li>✓ 5 jours d'événements</li>
                   </ul>
                 </div>
+             
               </div>
             </motion.div>
 
@@ -210,6 +211,45 @@ function DakarLivre() {
               </div>
             </motion.div>
           </Col>
+
+
+          
+          {/* ── Section Vidéos YouTube ── */}
+<motion.div
+  className="dakar-videos-section"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.3, duration: 0.8 }}
+  viewport={{ once: true, amount: 0.2 }}
+>
+  <h3 className="dakar-videos-title">Revivez les éditions précédentes</h3>
+
+  <Row className="g-4">
+    {[
+      { id: 'I01e0P6SAU4'},
+      { id: '50UkiZH4nsY'  },
+      { id: 'NOApPEnVkH0' },
+    ].map((video, i) => (
+      <Col md={4} key={i}>
+        <motion.div
+          className="dakar-video-card"
+          whileHover={{ y: -6 }}
+          transition={{ type: 'spring', stiffness: 300 }}
+        >
+          <div className="dakar-video-wrapper">
+            <iframe
+              src={`https://www.youtube.com/embed/${video.id}`}
+              title={video.label}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <p className="dakar-video-label">{video.label}</p>
+        </motion.div>
+      </Col>
+    ))}
+  </Row>
+</motion.div>
         </Row>
       </Container>
     </motion.section>

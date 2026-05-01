@@ -451,8 +451,102 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.15s, background 0.2s;
-  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.35);
 }
 
 .dakar-btn-play:hover  { transform: scale(1.07); background: #ff8a5b; }
 .dakar-btn-play:active { transform: scale(0.96); }
+
+/* ── Bouton Réservez votre stand ── */
+.dakar-stand-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.2rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.dakar-stand-btn-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #ffa600 0%, #f4ac1c 50%, #e79a0a 100%);
+  background-size: 200% 100%;
+  color: #ffffff;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1.5px solid rgba(232, 185, 90, 0.6);
+  clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+  transition: background-position 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.dakar-stand-btn:hover .dakar-stand-btn-inner {
+  background-position: 100% 0;
+  transform: translateY(-2px);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.dakar-stand-btn:active .dakar-stand-btn-inner {
+  transform: translateY(0px);
+}
+
+.dakar-stand-btn svg {
+  flex-shrink: 0;
+  opacity: 0.85;
+
+}
+
+
+
+/* ── Section Vidéos ── */
+.dakar-videos-section {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(200, 151, 58, 0.2);
+}
+
+.dakar-videos-title {
+
+    letter-spacing: 1.5px;
+  font-size: 1.6rem;
+  color: #da9516;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dakar-video-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(200, 151, 58, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.dakar-video-card:hover {
+  border-color: rgba(200, 151, 58, 0.5);
+}
+
+/* Ratio 16:9 responsive */
+.dakar-video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.dakar-video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
