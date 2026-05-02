@@ -1,0 +1,496 @@
+/* ─── OVERLAY ─── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* ─── CARD ─── */
+.card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.18);
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ─── HEADER ─── */
+.header {
+  background: linear-gradient(135deg, #ff6b35 0%, #e55a24 100%);
+  padding: 32px 40px 28px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+  transition: background 0.2s;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 12px;
+}
+
+.headerTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.headerSub {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.progressBar {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: white;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+/* ─── BODY ─── */
+.body {
+  padding: 32px 40px 36px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* ─── STEPS BAR ─── */
+.stepsBar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.stepWrap {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: 1;
+}
+
+.stepLine {
+  height: 2px;
+  flex: 1;
+  margin: 0 6px;
+  background: #f0ede8;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+
+.stepLine.done {
+  background: #ff6b35;
+}
+
+.stepCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: all 0.3s;
+  background: #f0ede8;
+  color: #aaa;
+}
+
+.stepCircle.active {
+  background: #ff6b35;
+  color: white;
+  box-shadow: 0 4px 14px rgba(255, 107, 53, 0.35);
+}
+
+.stepCircle.done {
+  background: #ff6b35;
+  color: white;
+}
+
+.stepLabel {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #bbb;
+}
+
+.stepLabel.active,
+.stepLabel.done {
+  color: #ff6b35;
+}
+
+/* ─── SECTION TITLE ─── */
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid #f0ede8;
+}
+
+.sectionTitle span {
+  font-size: 11px;
+  color: #aaa;
+  font-weight: 400;
+  margin-left: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ─── GRID & GROUPS ─── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.groupFull {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  grid-column: 1 / -1;
+}
+
+/* ─── FORM ELEMENTS ─── */
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  letter-spacing: 0.3px;
+}
+
+.required {
+  color: #ff6b35;
+  margin-left: 2px;
+}
+
+.input,
+.select,
+.textarea {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: #222;
+  background: #fafaf9;
+  border: 1.5px solid #e8e4df;
+  border-radius: 10px;
+  padding: 11px 14px;
+  outline: none;
+  width: 100%;
+  transition: all 0.25s;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.textarea {
+  resize: none;
+  min-height: 90px;
+  line-height: 1.6;
+}
+
+.charCount {
+  font-size: 11px;
+  color: #bbb;
+  text-align: right;
+  margin-top: -3px;
+}
+
+/* ─── GENRE CHIPS ─── */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: #f5f1ed;
+  border: 1.5px solid #e8e4df;
+  color: #666;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.chip.selected {
+  background: rgba(255, 107, 53, 0.1);
+  border-color: #ff6b35;
+  color: #ff6b35;
+  font-weight: 600;
+}
+
+/* ─── UPLOAD ZONE ─── */
+.uploadZone {
+  border: 2px dashed #e0d8d0;
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s;
+  background: #fafaf9;
+}
+
+.uploadZone:hover {
+  border-color: #ff6b35;
+  background: rgba(255, 107, 53, 0.03);
+}
+
+.uploadIcon {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 107, 53, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  font-size: 18px;
+}
+
+/* ─── ACTIONS ─── */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1.5px solid #f0ede8;
+}
+
+.btnBack {
+  background: none;
+  border: none;
+  color: #999;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+}
+
+.btnNext {
+  background: linear-gradient(135deg, #ff6b35 0%, #e55a24 100%);
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+  transition: all 0.25s;
+}
+
+.btnNext:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(255, 107, 53, 0.4);
+}
+
+/* ─── CGU BOX ─── */
+.cguBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  background: #faf7f4;
+  border-radius: 10px;
+  border: 1px solid #f0ede8;
+  margin-top: 16px;
+  transition: border-color 0.2s;
+}
+
+.cguBox.error {
+  border-color: #ff6b35;
+}
+
+/* ─── SUCCESS ─── */
+.successBox {
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+.successIcon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #ff6b35, #e55a24);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+  margin: 0 auto 20px;
+  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.3);
+}
+
+.successTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.successSub {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.7;
+  max-width: 380px;
+  margin: 0 auto 24px;
+}
+
+.infoTags {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.infoTag {
+  background: #f5f1ed;
+  border: 1px solid #e8e4df;
+  color: #666;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* ─── COMING SOON OVERLAY ─── */
+.comingSoonOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.comingSoonIcon {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, #ff6b35 0%, #e55a24 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.35);
+}
+
+.comingSoonBadge {
+  display: inline-block;
+  background: rgba(255, 107, 53, 0.1);
+  color: #ff6b35;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 107, 53, 0.25);
+}
+
+.comingSoonTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.comingSoonSub {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  max-width: 360px;
+  margin: 0;
+}

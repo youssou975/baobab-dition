@@ -2,10 +2,11 @@ import { Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import babImg from '../assets/bab.jpg';
-
+import EditeurForm from './formulaire/editform';
 
 function EditSection() {
   const [hoveredFeature, setHoveredFeature] = useState(null);
+const [showForm, setShowForm] = useState(false);
 
   const styles = {
     
@@ -413,7 +414,7 @@ function EditSection() {
             transition={{ delay: 0.4, duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Button
+            <Button onClick={() => setShowForm(true)}
               style={styles.btnPrimaryGold}
               size="lg"
               onMouseEnter={(e) => {
@@ -445,6 +446,8 @@ function EditSection() {
             >
               En savoir plus
             </Button>
+            <EditeurForm isOpen={showForm} onClose={() => setShowForm(false)} />
+
           </motion.div>
         </motion.div>
 
