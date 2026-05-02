@@ -26,7 +26,7 @@ export default function AboutBaobab() {
       <style></style>
 
       <motion.section
-        id="a-propos"
+        id="presentation"
         className="about-baobab"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
